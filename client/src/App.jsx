@@ -7,10 +7,11 @@ import ProductDetailsPerItem from './pages/ProductDetailsPerItem';
 import ContactUsPage from './pages/ContactUsPage';
 import SuccessPage from './pages/SuccessPage';
 import CancelPage from './pages/CancelPage';
+import { ContextProvider } from './Context';
 
 function App() {
   return (
-    <>
+    <ContextProvider>
       <Routes>
         <Route path="/" element={<LandingPage />} />{' '}
         <Route path="/products" element={<ProductPage />} />{' '}
@@ -19,7 +20,7 @@ function App() {
         <Route path="success" element={<SuccessPage />} />
         <Route path="cancel" element={<CancelPage />} />
       </Routes>
-    </>
+    </ContextProvider>
   );
 }
 
